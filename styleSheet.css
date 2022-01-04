@@ -1,0 +1,135 @@
+/*------ Global color variables* --------*/
+:root {
+    /* Primary colors */
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    /* Neutral colors */
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url("images/pattern-background-desktop.svg");
+    background-position: top;   /*-- Sets img as the background on the top part and background-color on the rest of the screen --*/
+    background-color: var(--paleBlue);
+    background-size: 100% 437px;  /* the img height is 437px, the width can be 100% of the originial */
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+      background-image: url("images/pattern-background-mobile.svg");
+    }
+  }
+
+#orderSummaryContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#orderSummaryCard {
+    background-color: white;
+    border-radius: 20px;
+    width: 450px;   /*matching the card width with the img for border radius purposes*/
+}
+
+/*-- Banner styling --*/
+header {
+    margin: 0;
+    padding: 0;
+}
+header img {
+    border-radius: 20px 20px 0 0; /* changing radius of top left and right */
+}
+
+/*-- Order summary and the paragraph bellow styling -- */
+h1 {
+    font-size: 30px;
+    font-weight: 900;
+}
+#titleWithDescription {
+    text-align: center;
+    margin: 0 50px 0 50px;
+    padding: 20px 0 20px 0;
+}
+#titleWithDescription p {
+    font-size: 16px;
+    color: var(--desaturatedBlue);
+}
+
+/*-- the pricing styling --*/
+#pricing {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--veryPaleBlue);
+    font-size: 16px;
+    margin: 0 50px 0 50px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+#AnnualPlanContainer {   /* puts Annual Plan and $59.99/year in a column */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0 50px 0 0; /* adjusted the container to move a bit left */
+}
+#AnnualPlanContainer p {
+    margin: 0;
+    padding: 0;
+}
+#pricing a {
+    color: var(--brightBlue);
+}
+#pricing a:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+#price {
+    color: var(--desaturatedBlue);
+}
+
+/*-- payment proceed styling --*/
+#paymentProceed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+ button {
+    background-color: var(--brightBlue);
+    color: white;
+    font-weight: 900;
+    font-size: 14px;
+    opacity: 1;
+    width: 350px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px -10px var(--brightBlue);  /* button shadow styling */
+}
+button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#paymentProceed a {
+    text-decoration: none;
+    color: var(--desaturatedBlue);
+    font-weight: bold;
+}
+#paymentProceed a:hover {
+    color: var(--darkBlue);
+}
+
+.attribution {
+    margin-top: 50px;
+}
