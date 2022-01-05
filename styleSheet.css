@@ -23,8 +23,12 @@ body {
       background-image: url("images/pattern-background-mobile.svg");
     }
 
+    /* resizes the order summary card for mobile phones */
     #orderSummaryCard {
         max-width: 80%;
+    }
+    header img {
+        max-width: 100%;
     }
   }
 
