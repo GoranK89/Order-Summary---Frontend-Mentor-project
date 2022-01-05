@@ -22,18 +22,23 @@ body {
     body {
       background-image: url("images/pattern-background-mobile.svg");
     }
+
+    #orderSummaryCard {
+        max-width: 80%;
+    }
   }
 
 #orderSummaryContainer {
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    
 }
 
 #orderSummaryCard {
     background-color: white;
     border-radius: 20px;
-    width: 450px;   /*matching the card width with the img for border radius purposes*/
+    width: 450px;   /*matching the card width with the img for border radius purposes*/    
 }
 
 /*-- Banner styling --*/
